@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "AjouterList";
+}
+
+@Html.ActionLink("Deconnexion", "Deconnexion", "Login");
+
+<h2>AjouterList</h2>
+
+@using (Html.BeginForm("AjouterList", "List"))
+{
+    <p>Nom du produit</p>
+    @Html.Editor("Nom");
+    <br />
+    @Html.ValidationMessage("Nom");
+    <br />
+    <p>Prix du produit</p>
+    @Html.Editor("Prix");
+    <br />
+    @Html.ValidationMessage("Prix");
+    <br />
+    <p>Detail du produit</p>
+    @Html.Editor("Detail");
+    <br />
+    <input type="submit" value="Ajouter" />
+}
+<p>@ViewBag.count</p>
+
+@Html.ActionLink("Index", "Index", "Home");

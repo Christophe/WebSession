@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+@foreach (WebSession.Models.Item item in ViewBag.list)
+{
+    <p>@item.Id  @item.Nom @item.Prix @item.Detail</p>
+}
+
+@Html.ActionLink("Index", "Index","Home");
+

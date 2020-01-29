@@ -1,0 +1,18 @@
+﻿@model WebSession.Models.Personne
+
+<h2>Inscription</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("Login")
+        @Html.TextBox("Login")
+        @Html.ValidationMessage("Login")
+    </div>
+    <div>
+        @Html.Label("Password")
+        @Html.Password("Password : ")
+        @Html.ValidationMessage("Password")
+    </div>
+    <input type="submit" value="Inscription" />
+}
